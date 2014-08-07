@@ -32,6 +32,8 @@ module.exports = {
 			"You don't have the right shoes.",
 			"You're going to the beach tomorrow.",
 			"You're gonna do legs this weekend anyways.",
+			"You don't want to embarrass the other people doing legs.",
+			"You don't have enough time for due diligence. What's the point if you can't go 100%?"
 		];
 		return _.shuffle(excuses)[0];
 	},
