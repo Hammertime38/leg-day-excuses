@@ -16,6 +16,10 @@ exports.index = function(req, res){
   	res.set('Content-Type', 'application/json');
   	return res.json(payload)
   }
+  else if (req.accepts('application/javascript')) {
+  	res.set('Content-Type', 'application/javascript');
+  	return res.jsonp(payload);
+  }
   res.set('Content-Type', 'text/html');
   res.render('index', payload);
 };
