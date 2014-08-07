@@ -12,6 +12,10 @@ exports.index = function(req, res){
   	followUp: excuses.randomFollowUp() 
   };
 
+  if (req.accepts('text/html')) {
+  	res.set('Content-Type', 'text/html');
+    return res.render('index', payload);
+  }
   if (req.accepts('application/json')) {
   	res.set('Content-Type', 'application/json');
   	return res.json(payload)
